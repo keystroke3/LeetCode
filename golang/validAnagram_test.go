@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -55,7 +54,7 @@ func TestIsAnagram(t *testing.T) {
 		t.Run("", func(t *testing.T) {
 			anagram := isAnagram(test.input[0], test.input[1])
 			if anagram != test.expected {
-				fmt.Printf("Test failed, expected %v for input '%v, %v' but got %v\n", test.expected, test.input[0], test.input[1], anagram)
+				t.Errorf("Test failed, expected %v for input '%v, %v' but got %v\n", test.expected, test.input[0], test.input[1], anagram)
 			}
 		})
 	}
